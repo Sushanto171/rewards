@@ -12,9 +12,14 @@
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
         rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/63f1481430.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/63f1481430.js" crossorigin="anonymous"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +29,8 @@
                         font_color: 'rgba(65, 64, 64, 1)',
                     },
                     fontFamily: {
-                        'Inter': "Inter",
+                        'Poppins': "Poppins",
+                        'Eb': "EB Garamond",
                     },
                     backgroundImage: {
                         bg_image: "url('./images/banner.png')"
@@ -35,9 +41,52 @@
     </script>
 </head>
 
-<body class="font-Inter bg-bg_image">
-    <div class="text-font_color">
-    </div>
+<body class="max-w-screen-lg mx-auto w-11/12 text-font_color font-Poppins">
+    <!-- header start -->
+    <header class="space-y-5">
+        <!-- nav start -->
+        <nav class="flex justify-between items-center py-3 px-1 shadow-md">
+            <!-- nav-left-->
+            <div>
+                <a class="" href="index.html">
+                    <img src="./images/logo2.png" alt="">
+                </a>
+            </div>
+            <!-- nav-center -->
+            <div class=" hidden md:block">
+                <ul class="flex items-center gap-4 justify-start">
+                    <li class=""><a class="active:font-bold font-bold text-lg" href="index.html">Home</a></li>
+                    <li class=""><a class="flex items-center gap-1 hover:scale-105" href="">Service <i
+                                class="fa-solid fa-angle-right"></i></a></li>
+                    <li class=""><a class="flex items-center gap-1 hover:scale-105" href="">Cases <i
+                                class="fa-solid fa-angle-right"></i></a></li>
+                    <li class=""><a class="flex items-center gap-1  hover:scale-105" hover:scale-105 href="">Blog <i
+                                class="fa-solid fa-angle-right"></i></a></li>
+                    <li class=""><a class="flex items-center gap-1  hover:scale-105" href="">Contact Us <i
+                                class="fa-solid fa-angle-right"></i></a></li>
+                </ul>
+            </div>
+            <!-- nav-right -->
+            <div class="">
+                <button class="btn bg-primary text-white hover:bg-[#CD9D65]">Free Consultation</button>
+            </div>
+        </nav>
+        <!-- banner section start -->
+        <div class="bg-bg_image bg-cover bg-no-repeat bg-center flex justify-center items-center py-10 lg:py-20 rounded-md ">
+            <!-- banner content -->
+            <div class="text-center w-4/5 text-white">
+                <h1 class="text-3xl md:5xl lg:text-7xl leading-relaxed font-extrabold font-Eb capitalize">We provide effective  <br>legal solution</h1>
+                <p class="py-5 opacity-80">There are many variations of passages of Lorem Ipsum available, but the
+                    majority have suffered alteration in some form, by injected humour.</p>
+                <div class="flex gap-4 justify-center items-center w-10/12 mx-auto">
+                    <input class="border-none p-2 py-3 rounded-lg w-8/12 pl-5 bg-white focus:outline outline-2 outline-offset-2 outline-primary placeholder:text-sm text-slate-900" type="search" name="search" id="" placeholder="Search your Service" >
+                    <label for="search">
+                        <input class="btn bg-primary px-5 py-3 md:px-8 text-white border-none hover:bg-[#CD9D65]" type="button" value="Search">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>
